@@ -166,32 +166,3 @@ h2 {
 .align-self-flex-end {
     align-self: flex-end; /* Alinha o item no final do eixo cruzado */
 }
-
-/* Estilos Responsivos */
-@media (max-width: 600px) {
-    .container {
-        flex-direction: column;
-        height: auto;
-    }
-
-    .item {
-        width: 80px;
-        margin: 10px auto;
-    }
-
-    h1 {
-        font-size: 28px;
-    }
-
-    h2 {
-        font-size: 20px;
-    }
-
-    .subtitulo {
-        font-size: 16px;
-    }
-
-    .info {
-        font-size: 12px;
-    }
-}
