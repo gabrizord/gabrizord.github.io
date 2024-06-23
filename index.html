@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Tutorial Flexbox">
+    <meta name="author" content="Seu Nome">
+    <title>Tutorial Flexbox</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f9;
+        }
+        h1 {
+            font-size: 32px;
+            color: #333;
+            text-align: center;
+        }
+        h2 {
+            font-size: 24px;
+            color: #0056b3;
+            margin-top: 30px;
+        }
+        .subtitulo {
+            font-size: 18px;
+            color: #333;
+            margin: 10px 0;
+        }
+        .info {
+            font-size: 14px;
+            font-style: italic;
+            color: #777;
+            margin-bottom: 20px;
+        }
+        .container {
+            display: flex; /* Define o container como flexível */
+            border: 3px solid black;
+            height: 300px;
+            margin-bottom: 20px;
+            padding: 10px;
+            box-sizing: border-box;
+            background-color: #fff;
+        }
+        .item {
+            border: 2px solid red;
+            width: 100px;
+            margin: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #ffdddd;
+        }
+
+        /* Exemplo de flex-direction */
+        .flex-direction-row {
+            flex-direction: row; /* Alinha os itens em linha (padrão) */
+        }
+        .flex-direction-column {
+            flex-direction: column; /* Alinha os itens em coluna */
+        }
+
+        /* Exemplo de justify-content */
+        .justify-content-flex-start {
+            justify-content: flex-start; /* Alinha os itens no início do container */
+        }
+        .justify-content-center {
+            justify-content: center; /* Centraliza os itens horizontalmente */
+        }
+        .justify-content-flex-end {
+            justify-content: flex-end; /* Alinha os itens no final do container */
+        }
+        .justify-content-space-between {
+            justify-content: space-between; /* Espaça os itens com o máximo de espaço entre eles */
+        }
+        .justify-content-space-around {
+            justify-content: space-around; /* Espaça os itens com espaço igual ao redor deles */
+        }
+
+        /* Exemplo de align-items */
+        .align-items-flex-start {
+            align-items: flex-start; /* Alinha os itens no início do eixo cruzado */
+        }
+        .align-items-center {
+            align-items: center; /* Centraliza os itens no eixo cruzado */
+        }
+        .align-items-flex-end {
+            align-items: flex-end; /* Alinha os itens no final do eixo cruzado */
+        }
+        .align-items-stretch {
+            align-items: stretch; /* Estica os itens para preencher o container */
+        }
+
+        /* Exemplo de align-content */
+        .align-content-flex-start {
+            align-content: flex-start; /* Alinha as linhas no início do container */
+        }
+        .align-content-center {
+            align-content: center; /* Centraliza as linhas verticalmente */
+        }
+        .align-content-flex-end {
+            align-content: flex-end; /* Alinha as linhas no final do container */
+        }
+        .align-content-space-between {
+            align-content: space-between; /* Espaça as linhas com o máximo de espaço entre elas */
+        }
+        .align-content-space-around {
+            align-content: space-around; /* Espaça as linhas com espaço igual ao redor delas */
+        }
+
+        /* Exemplo de flex-wrap */
+        .flex-wrap-nowrap {
+            flex-wrap: nowrap; /* Não permite que os itens quebrem linha (padrão) */
+        }
+        .flex-wrap-wrap {
+            flex-wrap: wrap; /* Permite que os itens quebrem linha */
+        }
+        .flex-wrap-wrap-reverse {
+            flex-wrap: wrap-reverse; /* Permite que os itens quebrem linha em ordem reversa */
+        }
+
+        /* Exemplo de flex-grow, flex-shrink, flex-basis */
+        .flex-grow-1 {
+            flex-grow: 1; /* Faz o item crescer para preencher o espaço disponível */
+        }
+        .flex-shrink-1 {
+            flex-shrink: 1; /* Faz o item encolher quando necessário */
+        }
+        .flex-basis-50 {
+            flex-basis: 50px; /* Define a base de tamanho do item */
+        }
+
+        /* Exemplo de order */
+        .order-1 {
+            order: 1; /* Define a ordem do item como 1 */
+        }
+        .order-2 {
+            order: 2; /* Define a ordem do item como 2 */
+        }
+
+        /* Exemplo de align-self */
+        .align-self-flex-start {
+            align-self: flex-start; /* Alinha o item no início do eixo cruzado */
+        }
+        .align-self-center {
+            align-self: center; /* Centraliza o item no eixo cruzado */
+        }
+        .align-self-flex-end {
+            align-self: flex-end; /* Alinha o item no final do eixo cruzado */
+        }
+    </style>
+</head>
+<body>
+    <h1>Tutorial Flexbox</h1>
+    <p>Este tutorial irá ensiná-lo a usar Flexbox para criar layouts flexíveis e responsivos.</p>
+
+    <h2>Flex Direction (Direção dos Itens)</h2>
+    <p class="subtitulo">A propriedade <code>flex-direction</code> define a direção em que os itens são colocados no container.</p>
+    <div class="container flex-direction-row">
+        <div class="item">Item 1</div>
+        <div class="item">Item 2</div>
+        <div class="item">Item 3</div>
+        <div class="item">Item 4</div>
+    </div>
+    <p class="info"><code>flex-direction: row;</code> - Itens em linha (padrão).</p>
+    <div class="container flex-direction-column">
+        <div class="item">Item 1</div>
+        <div class="item">Item 2</div>
+        <div class="item">Item 3</div>
+        <div class="item">Item 4</div>
+    </div>
+    <p class="info"><code>flex-direction: column;</code> - Itens em coluna.</p>
+
+    <h2>Justify Content (Alinhamento Principal)</h2>
+    <p class="subtitulo">A propriedade <code>justify-content</code> alinha os itens ao longo do eixo principal.</p>
+    <div class="container justify-content-flex-start">
+        <div class="item">Item 1</div>
+        <div class="item">Item 2</div>
+        <div class="item">Item 3</div>
+        <div class="item">Item 4</div>
+    </div>
+    <p class="info"><code>justify-content: flex-start;</code> - Alinhado ao início.</p>
+    <div class="container justify-content-center">
+        <div class="item">Item 1</div>
+        <div class="item">Item 2</div>
+        <div class="item">Item 3</div>
+        <div class="item">Item 4</div>
+    </div>
+    <p class="info"><code>justify-content: center;</code> - Centralizado.</p>
+    <div class="container justify-content-flex-end">
+        <div class="item">Item 1</div>
+        <div class="item">Item 2</div>
+        <div class="item">Item 3</div>
+        <div class="item">Item 4</div>
+    </div>
+    <p class="info"><code>justify-content: flex-end;</code> - Alinhado ao final.</p>
+    <div class="container justify-content-space-between">
+        <div class="item">Item 1</div>
+        <div class="item">Item 2</div>
+        <div class="item">Item 3</div>
+        <div class="item">Item 4</div>
+    </div>
+    <p class="info"><code>justify-content: space-between;</code> - Espaçado com o máximo de espaço entre os itens.</p>
+    <div class="container justify-content-space-around">
+        <div class="item">Item 1</div>
+        <div class="item">Item 2</div>
+        <div class="item">Item 3</div>
+        <div class="item">Item 4</div>
+    </div>
+    <p class="info"><code>justify-content: space-around;</code> - Espaçado com espaço igual ao redor dos itens.</p>
+
+    <h2>Align Items (Alinhamento Cruzado)</h2>
+    <p class="subtitulo">A propriedade <code>align-items</code> alinha os itens ao longo do eixo cruzado.</p>
+    <div class="container align-items-flex-start">
+        <div class="item">Item 1</div>
+        <div class="item">Item 2</div>
+        <div class="item">Item 3</div>
+        <div class="item">Item 4</div>
+    </div>
+    <p class="info"><code>align-items: flex-start;</code> - Alinhado ao início do eixo cruzado.</p>
+    <div class="container align-items-center">
+        <div class="item">Item 1</div>
+        <div class="item">Item 2</div>
+        <div class="item">Item 3</div>
+        <div class="item">Item 4</div>
+    </div>
+    <p class="info"><code>align-items: center;</code> - Centralizado no eixo cruzado.</p>
+    <div class="container align-items-flex-end">
+        <div class="item">Item 1</div>
+        <div class="item">Item 2</div>
+        <div class="item">Item 3</div>
+        <div class="item">Item 4</div>
+    </div>
+    <p class="info"><code>align-items: flex-end;</code> - Alinhado ao final do eixo cruzado.</p>
+    <div class="container align-items-stretch">
+        <div class="item">Item 1</div>
+        <div class="item">Item 2</div>
+        <div class="item">Item 3</div>
+        <div class="item">Item 4</div>
+    </div>
+    <p class="info"><code>align-items: stretch;</code> - Esticado para preencher o container.</p>
+
+    <h2>Align Content (Alinhamento do Conteúdo)</h2>
+    <p class="subtitulo">A propriedade <code>align-content</code> alinha as linhas de um container com múltiplas linhas.</p>
+    <div class="container align-content-flex-start flex-wrap-wrap">
+        <div class="item">Item 1</div>
+        <div class="item">Item 2</div>
+        <div class="item">Item 3</div>
+        <div class="item">Item 4</div>
+        <div class="item">Item 5</div>
+        <div class="item">Item 6</div>
+    </div>
+    <p class="info"><code>align-content: flex-start;</code> - Alinhado ao início do container.</p>
+    <div class="container align-content-center flex-wrap-wrap">
+        <div class="item">Item 1</div>
+        <div class="item">Item 2</div>
+        <div class="item">Item 3</div>
+        <div class="item">Item 4</div>
+        <div class="item">Item 5</div>
+        <div class="item">Item 6</div>
+    </div>
+    <p class="info"><code>align-content: center;</code> - Centralizado verticalmente.</p>
+    <div class="container align-content-flex-end flex-wrap-wrap">
+        <div class="item">Item 1</div>
+        <div class="item">Item 2</div>
+        <div class="item">Item 3</div>
+        <div class="item">Item 4</div>
+        <div class="item">Item 5</div>
+        <div class="item">Item 6</div>
+    </div>
+    <p class="info"><code>align-content: flex-end;</code> - Alinhado ao final do container.</p>
+    <div class="container align-content-space-between flex-wrap-wrap">
+        <div class="item">Item 1</div>
+        <div class="item">Item 2</div>
+        <div class="item">Item 3</div>
+        <div class="item">Item 4</div>
+        <div class="item">Item 5</div>
+        <div class="item">Item 6</div>
+    </div>
+    <p class="info"><code>align-content: space-between;</code> - Espaçado com o máximo de espaço entre as linhas.</p>
+    <div class="container align-content-space-around flex-wrap-wrap">
+        <div class="item">Item 1</div>
+        <div class="item">Item 2</div>
+        <div class="item">Item 3</div>
+        <div class="item">Item 4</div>
+        <div class="item">Item 5</div>
+        <div class="item">Item 6</div>
+    </div>
+    <p class="info"><code>align-content: space-around;</code> - Espaçado com espaço igual ao redor das linhas.</p>
+
+    <h2>Flex Wrap (Quebra de Linha)</h2>
+    <p class="subtitulo">A propriedade <code>flex-wrap</code> controla se os itens podem quebrar linha.</p>
+    <div class="container flex-wrap-nowrap">
+        <div class="item">Item 1</div>
+        <div class="item">Item 2</div>
+        <div class="item">Item 3</div>
+        <div class="item">Item 4</div>
+        <div class="item">Item 5</div>
+        <div class="item">Item 6</div>
+    </div>
+    <p class="info"><code>flex-wrap: nowrap;</code> - Itens não quebram linha (padrão).</p>
+    <div class="container flex-wrap-wrap">
+        <div class="item">Item 1</div>
+        <div class="item">Item 2</div>
+        <div class="item">Item 3</div>
+        <div class="item">Item 4</div>
+        <div class="item">Item 5</div>
+        <div class="item">Item 6</div>
+    </div>
+    <p class="info"><code>flex-wrap: wrap;</code> - Itens quebram linha.</p>
+    <div class="container flex-wrap-wrap-reverse">
+        <div class="item">Item 1</div>
+        <div class="item">Item 2</div>
+        <div class="item">Item 3</div>
+        <div class="item">Item 4</div>
+        <div class="item">Item 5</div>
+        <div class="item">Item 6</div>
+    </div>
+    <p class="info"><code>flex-wrap: wrap-reverse;</code> - Itens quebram linha em ordem reversa.</p>
+
+    <h2>Flex Grow, Flex Shrink e Flex Basis</h2>
+    <p class="subtitulo">As propriedades <code>flex-grow</code>, <code>flex-shrink</code> e <code>flex-basis</code> controlam o crescimento, encolhimento e a base de tamanho dos itens flexíveis.</p>
+    <div class="container">
+        <div class="item flex-grow-1">Item 1</div>
+        <div class="item">Item 2</div>
+        <div class="item">Item 3</div>
+    </div>
+    <p class="info"><code>flex-grow: 1;</code> - Faz o item crescer para preencher o espaço disponível.</p>
+    <div class="container">
+        <div class="item flex-shrink-1" style="flex-basis: 200px;">Item 1</div>
+        <div class="item">Item 2</div>
+        <div class="item">Item 3</div>
+    </div>
+    <p class="info"><code>flex-shrink: 1;</code> - Faz o item encolher quando necessário.</p>
+    <div class="container">
+        <div class="item" style="flex-basis: 50px;">Item 1</div>
+        <div class="item">Item 2</div>
+        <div class="item">Item 3</div>
+    </div>
+    <p class="info"><code>flex-basis: 50px;</code> - Define a base de tamanho do item.</p>
+
+    <h2>Order</h2>
+    <p class="subtitulo">A propriedade <code>order</code> altera a ordem dos itens dentro de um container flexível.</p>
+    <div class="container">
+        <div class="item order-2">Item 1</div>
+        <div class="item order-1">Item 2</div>
+        <div class="item">Item 3</div>
+    </div>
+    <p class="info"><code>order: 1;</code> - Define a ordem do item como 1.</p>
+
+    <h2>Align Self</h2>
+    <p class="subtitulo">A propriedade <code>align-self</code> alinha um único item dentro de um container flexível.</p>
+    <div class="container">
+        <div class="item align-self-flex-start">Item 1</div>
+        <div class="item align-self-center">Item 2</div>
+        <div class="item align-self-flex-end">Item 3</div>
+    </div>
+    <p class="info"><code>align-self: flex-start;</code> - Alinha o item no início do eixo cruzado.</p>
+    <p class="info"><code>align-self: center;</code> - Centraliza o item no eixo cruzado.</p>
+    <p class="info"><code>align-self: flex-end;</code> - Alinha o item no final do eixo cruzado.</p>
+</body>
+</html>
