@@ -1,168 +1,62 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
     margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    color: #333;
+}
+
+header {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
     padding: 20px;
-    background-color: #f4f4f9;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 h1 {
-    font-size: 32px;
-    color: #333;
-    text-align: center;
-}
-
-h2 {
-    font-size: 24px;
-    color: #0056b3;
-    margin-top: 30px;
-}
-
-.subtitulo {
-    font-size: 18px;
-    color: #333;
-    margin: 10px 0;
-}
-
-.info {
-    font-size: 14px;
-    font-style: italic;
-    color: #777;
-    margin-bottom: 20px;
+    margin: 0;
+    font-size: 2.5em;
+    font-weight: bold;
 }
 
 .container {
-    display: flex; /* Define o container como flexível */
-    border: 3px solid black;
-    height: 300px;
-    margin-bottom: 20px;
-    padding: 10px;
-    box-sizing: border-box;
-    background-color: #fff;
-    flex-wrap: wrap;
-}
-
-.item {
-    border: 2px solid red;
-    width: 100px;
-    margin: 15px;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
-    background-color: #ffdddd;
+    gap: 20px;
+    margin-top: 40px;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
-/* Exemplo de flex-direction */
-.flex-direction-row {
-    flex-direction: row; /* Alinha os itens em linha (padrão) */
+.btn {
+    background-color: #4682b4;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 25px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.flex-direction-column {
-    flex-direction: column; /* Alinha os itens em coluna */
+.btn:hover {
+    background-color: #5a9bd3;
+    transform: translateY(-5px);
 }
 
-/* Exemplo de justify-content */
-.justify-content-flex-start {
-    justify-content: flex-start; /* Alinha os itens no início do container */
-}
-
-.justify-content-center {
-    justify-content: center; /* Centraliza os itens horizontalmente */
-}
-
-.justify-content-flex-end {
-    justify-content: flex-end; /* Alinha os itens no final do container */
-}
-
-.justify-content-space-between {
-    justify-content: space-between; /* Espaça os itens com o máximo de espaço entre eles */
-}
-
-.justify-content-space-around {
-    justify-content: space-around; /* Espaça os itens com espaço igual ao redor deles */
-}
-
-/* Exemplo de align-items */
-.align-items-flex-start {
-    align-items: flex-start; /* Alinha os itens no início do eixo cruzado */
-}
-
-.align-items-center {
-    align-items: center; /* Centraliza os itens no eixo cruzado */
-}
-
-.align-items-flex-end {
-    align-items: flex-end; /* Alinha os itens no final do eixo cruzado */
-}
-
-.align-items-stretch {
-    align-items: stretch; /* Estica os itens para preencher o container */
-}
-
-/* Exemplo de align-content */
-.align-content-flex-start {
-    align-content: flex-start; /* Alinha as linhas no início do container */
-}
-
-.align-content-center {
-    align-content: center; /* Centraliza as linhas verticalmente */
-}
-
-.align-content-flex-end {
-    align-content: flex-end; /* Alinha as linhas no final do container */
-}
-
-.align-content-space-between {
-    align-content: space-between; /* Espaça as linhas com o máximo de espaço entre elas */
-}
-
-.align-content-space-around {
-    align-content: space-around; /* Espaça as linhas com espaço igual ao redor delas */
-}
-
-/* Exemplo de flex-wrap */
-.flex-wrap-nowrap {
-    flex-wrap: nowrap; /* Não permite que os itens quebrem linha (padrão) */
-}
-
-.flex-wrap-wrap {
-    flex-wrap: wrap; /* Permite que os itens quebrem linha */
-}
-
-.flex-wrap-wrap-reverse {
-    flex-wrap: wrap-reverse; /* Permite que os itens quebrem linha em ordem reversa */
-}
-
-/* Exemplo de flex-grow, flex-shrink, flex-basis */
-.flex-grow-1 {
-    flex-grow: 1; /* Faz o item crescer para preencher o espaço disponível */
-}
-
-.flex-shrink-1 {
-    flex-shrink: 1; /* Faz o item encolher quando necessário */
-}
-
-.flex-basis-50 {
-    flex-basis: 50px; /* Define a base de tamanho do item */
-}
-
-/* Exemplo de order */
-.order-1 {
-    order: 1; /* Define a ordem do item como 1 */
-}
-
-.order-2 {
-    order: 2; /* Define a ordem do item como 2 */
-}
-
-/* Exemplo de align-self */
-.align-self-flex-start {
-    align-self: flex-start; /* Alinha o item no início do eixo cruzado */
-}
-
-.align-self-center {
-    align-self: center; /* Centraliza o item no eixo cruzado */
-}
-
-.align-self-flex-end {
-    align-self: flex-end; /* Alinha o item no final do eixo cruzado */
+.btn:active {
+    transform: translateY(0);
 }
