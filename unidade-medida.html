@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Tutorial de Unidades de Medida em CSS">
+    <meta name="author" content="Seu Nome">
+    <title>Tutorial de Unidades de Medida em CSS</title>
+    <link rel="stylesheet" href="css/styles-medidas.css">
+</head>
+<body>
+    <h1>Tutorial de Unidades de Medida em CSS</h1>
+    <p>Este tutorial irá ensiná-lo a usar diferentes unidades de medida em CSS.</p>
+
+    <h2>Unidades Absolutas</h2>
+    <p class="subtitulo">Unidades que não mudam de tamanho relativo a outros elementos.</p>
+    <div class="container">
+        <div class="item px">100px</div>
+        <div class="item cm">2cm</div>
+        <div class="item in">1in</div>
+    </div>
+    <p class="info"><code>px</code> - Pixels são comumente usados para definir tamanhos precisos. Por exemplo, o tamanho de fontes e bordas.</p>
+    <p class="info"><code>cm</code> - Centímetros são usados principalmente para layouts de impressão.</p>
+    <p class="info"><code>in</code> - Polegadas são usadas também em contextos de impressão e alguns layouts específicos.</p>
+
+    <h2>Unidades Relativas</h2>
+    <p class="subtitulo">Unidades que mudam de tamanho relativo a outros elementos.</p>
+    <div class="container">
+        <div class="item em">2em</div>
+        <div class="item rem">2rem</div>
+        <div class="item percent">50%</div>
+    </div>
+    <p class="info"><code>em</code> - Relativo ao tamanho da fonte do elemento pai. Muito útil para tamanhos de fonte e espaçamentos.</p>
+    <p class="info"><code>rem</code> - Relativo ao tamanho da fonte raiz do documento. Útil para manter a consistência em tamanhos de fonte e espaçamentos ao longo do site.</p>
+    <p class="info"><code>%</code> - Porcentagem é relativo ao elemento pai. Comumente usado em layouts responsivos.</p>
+
+    <h2>Unidades de Viewport</h2>
+    <p class="subtitulo">Unidades relativas ao tamanho da viewport.</p>
+    <div class="container">
+        <div class="item vw">10vw</div>
+        <div class="item vh">10vh</div>
+    </div>
+    <p class="info"><code>vw</code> - Unidade que representa 1% da largura da viewport. Útil para layouts que devem ajustar-se à largura da janela do navegador.</p>
+    <p class="info"><code>vh</code> - Unidade que representa 1% da altura da viewport. Ideal para elementos que devem ajustar-se à altura da janela do navegador.</p>
+
+    <h2>Unidades de Tempo e Ângulo</h2>
+    <p class="subtitulo">Unidades usadas em animações e transformações.</p>
+    <div class="container">
+        <div class="item time">2s</div>
+        <div class="item angle">45deg</div>
+    </div>
+    <p class="info"><code>s</code> - Segundos, usados para definir a duração de animações e transições.</p>
+    <p class="info"><code>deg</code> - Graus, usados para rotações em transformações CSS.</p>
+
+    <h2>Exemplos Práticos</h2>
+    <p class="subtitulo">Veja como as unidades são usadas em situações reais.</p>
+    <div class="container">
+        <div class="item em">Fonte: 2em</div>
+        <div class="item rem">Margem: 2rem</div>
+        <div class="item percent">Largura: 50%</div>
+        <div class="item vw">Altura: 10vw</div>
+        <div class="item vh">Altura: 10vh</div>
+    </div>
+
+    <h2>Elemento Pai</h2>
+    <p class="subtitulo">Entendendo o conceito de elemento pai.</p>
+    <div class="container parent">
+        <div class="child">Filho 1 (50%)</div>
+        <div class="child">Filho 2 (50%)</div>
+    </div>
+    <p class="info">No exemplo acima, a largura dos elementos filhos é definida como 50% da largura do elemento pai.</p>
+</body>
+</html>
