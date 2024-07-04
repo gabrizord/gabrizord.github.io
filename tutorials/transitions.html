@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Tutorial Transitions" />
+    <meta name="author" content="Seu Nome" />
+    <title>Tutorial Transitions</title>
+    <link rel="stylesheet" href="/css/styles-transitions.css" />
+  </head>
+  <body>
+    <h1>Tutorial Transitions</h1>
+    <p>
+      Este tutorial irá ensiná-lo a usar CSS Transitions e outras técnicas para
+      criar animações suaves e responsivas.
+    </p>
+
+    <h2>Transitions</h2>
+    <p class="subtitulo">
+      A propriedade <code>transition</code> permite que você mude os valores das
+      propriedades de um elemento de forma suave durante um período de tempo.
+    </p>
+    <div class="container">
+      <div class="item transition-example">Passe o mouse</div>
+    </div>
+    <p class="info">
+      <code>transition: all 0.3s ease;</code> - Aplica a transição em todas as
+      propriedades com duração de 0.3s e função de tempo "ease".
+    </p>
+
+    <h2>Transition Property</h2>
+    <p class="subtitulo">
+      A propriedade <code>transition-property</code> especifica o nome das
+      propriedades CSS às quais a transição deve ser aplicada.
+    </p>
+    <div class="container">
+      <div class="item transition-property-example">Passe o mouse</div>
+    </div>
+    <p class="info">
+      <code>transition-property: background-color;</code> - A transição será
+      aplicada apenas à propriedade <code>background-color</code>.
+    </p>
+
+    <h2>Transition Duration</h2>
+    <p class="subtitulo">
+      A propriedade <code>transition-duration</code> define a duração da
+      transição.
+    </p>
+    <div class="container">
+      <div class="item transition-duration-example">Passe o mouse</div>
+    </div>
+    <p class="info">
+      <code>transition-duration: 0.5s;</code> - A transição terá a duração de
+      0.5 segundos.
+    </p>
+
+    <h2>Transition Timing Function</h2>
+    <p class="subtitulo">
+      A propriedade <code>transition-timing-function</code> especifica a
+      velocidade da curva da transição.
+    </p>
+    <div class="container">
+      <div class="item transition-timing-function-example">Passe o mouse</div>
+    </div>
+    <p class="info">
+      <code>transition-timing-function: ease-in-out;</code> - A transição terá
+      um efeito de aceleração e desaceleração.
+    </p>
+
+    <h2>Transition Delay</h2>
+    <p class="subtitulo">
+      A propriedade <code>transition-delay</code> define um tempo de espera
+      antes do início da transição.
+    </p>
+    <div class="container">
+      <div class="item transition-delay-example">Passe o mouse</div>
+    </div>
+    <p class="info">
+      <code>transition-delay: 1s;</code> - A transição começará com um atraso de
+      1 segundo.
+    </p>
+
+    <h2>Transform</h2>
+    <p class="subtitulo">
+      A propriedade <code>transform</code> aplica uma transformação 2D ou 3D a
+      um elemento.
+    </p>
+    <div class="container">
+      <div class="item transform-example">Passe o mouse</div>
+    </div>
+    <p class="info">
+      <code>transform: scale(1.5);</code> - Aumenta o tamanho do elemento em 1.5
+      vezes.
+    </p>
+
+    <h2>Animation</h2>
+    <p class="subtitulo">
+      A propriedade <code>animation</code> permite que você crie animações
+      complexas utilizando <code>@keyframes</code>.
+    </p>
+    <div class="container">
+      <div class="item animation-example">Animação</div>
+    </div>
+    <p class="info">
+      <code>animation: example 4s infinite;</code> - Aplica a animação
+      <code>example</code> com duração de 4 segundos e repetição infinita.
+    </p>
+
+    <h2>Keyframes</h2>
+    <p class="subtitulo">
+      A regra <code>@keyframes</code> permite que você defina o comportamento da
+      animação em vários pontos ao longo da sua duração.
+    </p>
+    <div class="container">
+      <div class="item keyframes-example">Animação</div>
+    </div>
+    <p class="info">
+      <code
+        >@keyframes example { from {transform: rotate(0deg);} to {transform:
+        rotate(360deg);} }</code
+      >
+      - Define uma animação que rotaciona o elemento de 0 a 360 graus.
+    </p>
+  </body>
+</html>

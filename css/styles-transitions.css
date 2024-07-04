@@ -1,0 +1,120 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f4f9;
+}
+
+h1 {
+    font-size: 32px;
+    color: #333;
+    text-align: center;
+}
+
+h2 {
+    font-size: 24px;
+    color: #0056b3;
+    margin-top: 30px;
+}
+
+.subtitulo {
+    font-size: 18px;
+    color: #333;
+    margin: 10px 0;
+}
+
+.info {
+    font-size: 14px;
+    font-style: italic;
+    color: #777;
+    margin-bottom: 20px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid black;
+    height: 200px;
+    margin-bottom: 20px;
+    padding: 10px;
+    box-sizing: border-box;
+    background-color: #fff;
+}
+
+.item {
+    border: 2px solid red;
+    width: 150px;
+    height: 150px;
+    margin: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffdddd;
+    transition: all 0.3s ease;
+}
+
+.transition-example:hover {
+    background-color: #ff0000;
+}
+
+.transition-property-example {
+    transition-property: background-color;
+    transition-duration: 0.3s;
+    transition-timing-function: ease;
+}
+.transition-property-example:hover {
+    background-color: #00ff00;
+}
+
+.transition-duration-example {
+    transition-duration: 0.5s;
+    transition-property: background-color;
+    transition-timing-function: ease;
+}
+.transition-duration-example:hover {
+    background-color: #0000ff;
+}
+
+.transition-timing-function-example {
+    transition-timing-function: ease-in-out;
+    transition-property: background-color;
+    transition-duration: 0.3s;
+}
+.transition-timing-function-example:hover {
+    background-color: #ff00ff;
+}
+
+.transition-delay-example {
+    transition-delay: 1s;
+    transition-property: background-color;
+    transition-duration: 0.3s;
+    transition-timing-function: ease;
+}
+.transition-delay-example:hover {
+    background-color: #ffff00;
+}
+
+.transform-example {
+    transition: transform 0.3s ease;
+}
+.transform-example:hover {
+    transform: scale(1.5);
+}
+
+@keyframes example {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.animation-example {
+    animation: example 4s infinite;
+}
+
+.keyframes-example {
+    animation: example 4s infinite;
+}
